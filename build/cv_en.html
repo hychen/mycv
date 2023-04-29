@@ -1,0 +1,374 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><style>@charset "UTF-8";
+/* Workaround for 'break-before:avoid' */
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+}
+
+ul, li {
+  margin: 0;
+  padding: 0;
+}
+
+span, q {
+  display: block;
+}
+
+p {
+  margin: 0;
+}
+
+@page {
+  size: A4;
+  margin: 15mm 0 20mm 0;
+}
+@page :first {
+  margin-top: 10mm;
+}
+a {
+  color: #222222;
+  font-weight: inherit;
+  text-decoration: none;
+}
+a[href] {
+  text-decoration: underline;
+  text-decoration-color: #888888;
+}
+
+p, q {
+  line-height: 1.25em;
+}
+
+li {
+  line-height: 1.35em;
+}
+li:first-child {
+  margin-top: 0;
+}
+
+.content {
+  width: 1000px;
+  height: auto;
+  padding: 0 50px;
+  margin: 0 auto;
+  font-family: Helvetica, Arial, sans-serif;
+  color: #222222;
+}
+
+.table {
+  width: 100%;
+  display: table;
+}
+.table .main {
+  display: table-cell;
+  width: 70%;
+  padding-right: 50px;
+}
+.table .side {
+  display: table-cell;
+  width: 30%;
+  padding-left: 50px;
+  text-align: right;
+}
+
+.summary {
+  font-size: 15px;
+}
+.summary:empty {
+  display: none;
+}
+
+.section-title {
+  font-size: 26px;
+  font-weight: normal;
+  margin: 0 0 20px 0;
+}
+
+.margin-container-2:not(:first-child) {
+  margin-top: 20px;
+}
+
+.margin-container-3:not(:first-child) {
+  margin-top: 30px;
+}
+
+.margin-container-4:not(:first-child) {
+  margin-top: 50px;
+}
+
+.padding-container-2 {
+  padding: 20px 0;
+}
+
+.margin-text-1 {
+  margin-top: 2px;
+}
+.margin-text-1:empty {
+  display: none;
+}
+
+.margin-text-2 {
+  margin-top: 4px;
+}
+.margin-text-2:empty {
+  display: none;
+}
+
+.margin-text-3 {
+  margin-top: 6px;
+}
+.margin-text-3:empty {
+  display: none;
+}
+
+.margin-text-4 {
+  margin-top: 8px;
+}
+.margin-text-4:empty {
+  display: none;
+}
+
+.margin-text-5 {
+  margin-top: 14px;
+}
+.margin-text-5:empty {
+  display: none;
+}
+
+.no-break {
+  break-inside: avoid;
+}
+
+.no-alone-1 {
+  break-inside: avoid;
+}
+.no-alone-1::after {
+  content: "";
+  display: block;
+  height: 75px;
+  margin-bottom: -75px;
+}
+
+.no-alone-2 {
+  break-inside: avoid;
+}
+.no-alone-2::after {
+  content: "";
+  display: block;
+  height: 150px;
+  margin-bottom: -150px;
+}
+
+.markdown h1 {
+  font-size: 160%;
+  font-weight: bolder;
+}
+.markdown h2 {
+  font-size: 150%;
+  font-weight: bolder;
+}
+.markdown h3 {
+  font-size: 140%;
+  font-weight: bolder;
+}
+.markdown h4 {
+  font-size: 130%;
+  font-weight: bold;
+}
+.markdown h5 {
+  font-size: 120%;
+  font-weight: bold;
+}
+.markdown h6 {
+  font-size: 110%;
+  font-weight: bold;
+}
+.markdown ul, .markdown ol {
+  margin-left: 20px;
+}
+.markdown img {
+  display: block;
+  margin: 20px auto;
+  max-width: 1000px;
+  text-align: center;
+}
+.markdown blockquote {
+  margin: 20px 0;
+  padding: 15px 20px;
+}
+.markdown blockquote p {
+  display: inline;
+}
+.markdown code {
+  font-family: monospace;
+}
+
+.main .highlights {
+  width: auto;
+  display: block;
+  padding: 0 10px;
+  margin-bottom: 0;
+  columns: 2;
+  column-width: 310px;
+  column-gap: 10px;
+}
+.main .highlights li {
+  font-size: 14px;
+  list-style: none;
+}
+.main .highlights li:before {
+  content: "· ";
+  vertical-align: middle;
+}
+.main .left {
+  display: table-cell;
+}
+.main .left .title {
+  font-size: 18px;
+  font-weight: bold;
+  display: block;
+}
+.main .left .subtitle {
+  font-size: 16px;
+  font-weight: lighter;
+  display: block;
+}
+.main .right {
+  text-align: right;
+  display: table-cell;
+}
+.main .right .date {
+  font-size: 15px;
+  font-weight: lighter;
+  white-space: nowrap;
+}
+
+.basics .main {
+  vertical-align: middle;
+}
+.basics .main .name {
+  font-size: 80px;
+  line-height: 1em;
+  font-weight: bold;
+  display: block;
+  margin-left: -5.6px;
+}
+.basics .main .label {
+  font-size: 40px;
+  line-height: 1em;
+  font-weight: lighter;
+  display: block;
+  margin-left: -1.6px;
+}
+.basics .side {
+  vertical-align: middle;
+  padding-left: 0;
+  padding-top: 15px;
+}
+.basics .side .contact {
+  list-style-type: none;
+}
+.basics .side .contact li {
+  font-size: 18px;
+  line-height: 1.6em;
+}
+
+.links ul {
+  list-style: none;
+}
+.links ul li {
+  font-size: 14px;
+}
+
+.education .title {
+  font-size: 15px;
+}
+.education .institution {
+  font-size: 15px;
+  font-weight: lighter;
+}
+
+.awards .header .title {
+  font-size: 15px;
+}
+.awards .header .awarder {
+  font-size: 15px;
+  font-weight: lighter;
+}
+.awards .summary {
+  font-size: 14px;
+}
+
+.certificates .name {
+  font-size: 15px;
+}
+.certificates .issuer {
+  font-size: 15px;
+  font-weight: lighter;
+}
+
+.skills .section-title {
+  margin: 0;
+}
+.skills .container {
+  display: block;
+  columns: 2;
+  column-gap: 10px;
+}
+.skills .container .article {
+  break-inside: avoid-column;
+  min-width: 120px;
+  padding-top: 20px;
+}
+.skills .container .article span {
+  display: block;
+  font-size: 18px;
+  font-weight: lighter;
+}
+.skills .container .article li {
+  font-size: 14px;
+  list-style: none;
+}
+
+.languages ul {
+  list-style: none;
+}
+.languages ul li {
+  font-size: 14px;
+}
+
+.interests ul {
+  list-style: none;
+}
+.interests ul li {
+  font-size: 14px;
+}
+
+.references .name {
+  font-size: 15px;
+}
+.references q {
+  font-size: 14.5px;
+  font-weight: lighter;
+  font-style: italic;
+}</style><title>Resume Tyson Chen – Consultant</title></head><body><div class="content"><div class="basics"><div class="table padding-container-2"><div class="main"><span class="name">Tyson Chen</span><span class="label">Consultant</span></div><div class="side"><ul class="contact"><li></li><li>ossug.hychen@gmail.com</li><li class="margin-text-5">New Taipei, Taiwan</li></ul></div></div><div class="summary markdown padding-container-2"><p>Experienced technology leader with a decade of expertise in driving digital transformation, achieving business goals, and implementing strategic technology solutions. Skilled in artificial intelligence, SaaS, open source technology, and the Internet of Things. Strong communication and collaboration skills to foster successful project partnerships between business and technology.</p>
+</div></div><div class="table padding-container-2"><div class="main"><div class="work margin-container-4"><p class="section-title no-alone-2">Experience</p><div class="container"><div class="article margin-container-3"><div class="header no-alone-1"><div class="table"><div class="left"><span class="title">Freelancer</span><span class="subtitle margin-text-1"><a></a></span></div><div class="right"><span class="date">Jan 2020 - Present</span></div></div></div><div class="summary markdown margin-text-4"><p>Provided freelance services, specializing in the evaluation of cutting-edge technologies. Developed product prototypes utilizing various technologies, including AI, Python, Polkadot, Rust, Solidity, Arweave, and Flutter.</p>
+</div></div><div class="article margin-container-3"><div class="header no-alone-1"><div class="table"><div class="left"><span class="title">Founder and Chief Executive Officer (CEO)</span><span class="subtitle margin-text-1"><a>TrustableAI Inc.</a></span></div><div class="right"><span class="date">Jan 2018 - Jan 2020</span></div></div></div><div class="summary markdown margin-text-4"><p>TrustableAI leverages AI technology for ethical and trustworthy use, offering the TrustableAI Augit platform to evaluate model fairness, robustness, and reliability. Provides customized consulting services and promotes ethical AI and fair algorithms through workshops and speeches.</p>
+</div><ul class="highlights margin-text-4 no-break"><li>Founded and led company's overall strategy and development.</li><li>Selected for well-known startup accelerator AppWorks, receiving support and resources for company growth.</li><li>Contributed to government discussions on regulatory issues, such as &quot;trustworthy AI,&quot; for industry development.</li><li>Ended company operations due to unfortunate health reasons.</li></ul></div><div class="article margin-container-3"><div class="header no-alone-1"><div class="table"><div class="left"><span class="title">Project Advisor</span><span class="subtitle margin-text-1"><a>Emerging Industry Technology R&amp;D Planning and Strategy Promotion project of 2019</a></span></div><div class="right"><span class="date">May 2019 - Aug 2019</span></div></div></div><div class="summary markdown margin-text-4"><p>The project assisted in establishing emerging technology projects, collaborating with domestic and foreign experts in academia and industry to analyze research topics, plan and evaluate projects, and serve as a strategist to carry out industry technology issue analysis, strategy planning, and project execution evaluation.</p>
+</div><ul class="highlights margin-text-4 no-break"><li>Scanned popular technology topics and trends in Taiwan's tech community</li><li>Assisted the Think Tank in topic selection.</li></ul></div><div class="article margin-container-3"><div class="header no-alone-1"><div class="table"><div class="left"><span class="title">Project Investigator</span><span class="subtitle margin-text-1"><a>Communication Platform for Civil Society and Science Technology Policy 2017, sponsored by Board of Science and Technology, R.O.C. (Taiwan)</a></span></div><div class="right"><span class="date">Oct 2017 - Jan 2018</span></div></div></div><div class="summary markdown margin-text-4"><p>The project aims to incorporate public participation mechanisms at the early stages of the policy cycle, integrating public thoughts and ideas from virtual networks and local entities into technology policies, and establishing a rolling policy formation mechanism.</p>
+</div><ul class="highlights margin-text-4 no-break"><li>Secured funding of 10 million NTD through successful proposal writing.</li><li>Led with responsibility for personnel, funding, and legal decision-making.</li><li>Assembled and led a digital tool development team, delivering online collaboration software.</li><li>Motivated team members to work voluntarily during funding delays.</li><li>Designed methodology for public participation in policy suggestions, fostering public-private cooperation.</li><li>Incorporated constructive feedback from Taiwan's tech community into policy planning.</li></ul></div><div class="article margin-container-3"><div class="header no-alone-1"><div class="table"><div class="left"><span class="title">Senior Software Developer</span><span class="subtitle margin-text-1"><a>Vectr Lab Inc.</a></span></div><div class="right"><span class="date">Aug 2015 - Aug 2017</span></div></div></div><div class="summary markdown margin-text-4"><p>Vectr Lab is a US-based startup company that offers a free collaborative vector graphics editor for web and desktop applications. Its goal is to help everyone easily and intuitively create vector graphic designs with a simple yet powerful cross-platform tool.</p>
+</div><ul class="highlights margin-text-4 no-break"><li>Developed frontend graphics, multi-login function, and DevOps environment.</li><li>Utilized various technologies including JavaScript, Express, MongoDB, and AWS.</li><li>Learned and mastered CRDT data structures for cloud architecture of real-time collaboration digital tools.</li></ul></div><div class="article margin-container-3"><div class="header no-alone-1"><div class="table"><div class="left"><span class="title">Freelancer</span><span class="subtitle margin-text-1"><a></a></span></div><div class="right"><span class="date">Apr 2015 - Jul 2015</span></div></div></div><div class="summary markdown margin-text-4"><p>Provided freelance services to a startup company, designing and developing microservices for their camera IoT device using Python and AWS DynamoDB. Also contributed to multiple open-source software projects by submitting code, bug reports, and solving issues.</p>
+</div></div><div class="article margin-container-3"><div class="header no-alone-1"><div class="table"><div class="left"><span class="title"></span><span class="subtitle margin-text-1"><a>Gap Year</a></span></div><div class="right"><span class="date">Jan 2014 - Mar 2015</span></div></div></div><div class="summary markdown margin-text-4"></div><ul class="highlights margin-text-4 no-break"><li>Participated in the preparation of South Star Startup Accelerator</li><li>Established an entrepreneurial community to promote industry-academic collaboration.</li><li>Successfully recommended a candidate for an important position in driving information policy development for the Tainan City government</li><li>Invited as a course instructor at National Cheng Kung University</li><li>Won 1st prize in a hackathon competition</li><li>Participated pgrest project, which transforms PostgreSQL into a NoSQL database and brings innovation to the database industry.</li></ul></div><div class="article margin-container-3"><div class="header no-alone-1"><div class="table"><div class="left"><span class="title">Software Engineer</span><span class="subtitle margin-text-1"><a href="https://canonical.com">Canonical Ltd.</a></span></div><div class="right"><span class="date">Aug 2010 - Dec 2013</span></div></div></div><div class="summary markdown margin-text-4"><p>Canonical Ltd. is a UK-based software company that develops and provides commercial support for the open-source Ubuntu operating system.</p>
+</div><ul class="highlights margin-text-4 no-break"><li>Ensured end-to-end technical integration with OEM/ODM and chipset suppliers.</li><li>Fixed multiple bugs on Ubuntu BIOS, kernel, drivers, and applications.</li><li>Developed Ubuntu factory mode restore solution and successfully implemented them in ASUS and HP projects.</li><li>Developed Ubuntu factory installation solutions and successfully implemented them in HP projects.</li><li>Contributed multiple patches upstream to improve the overall open-source software ecosystem.</li></ul></div><div class="article margin-container-3"><div class="header no-alone-1"><div class="table"><div class="left"><span class="title">Software Engineer</span><span class="subtitle margin-text-1"><a href="https://www.jorjin.com">Jorjin Technologies Inc.</a></span></div><div class="right"><span class="date">Apr 2009 - Apr 2010</span></div></div></div><div class="summary markdown margin-text-4"><p>Jorjin is a global component supplier specializing in wireless system-on-module (SoM) and system-in-package (SiP) module technology.</p>
+</div><ul class="highlights margin-text-4 no-break"><li>Participated in multiple Android embedded device projects, responsible for enabling TI WIFI/BT modules and ensuring wireless network and Bluetooth functionality in customer embedded systems.</li><li>Successfully implemented a proprietary SDIO driver for TI 1271, which can run on Freescale iMx51 and TI OMAP3530.</li><li>Successfully ported 0xdroid to Devkit8000 development board.</li><li>Proficient in Android wireless network and Bluetooth-related knowledge.</li></ul></div><div class="article margin-container-3"><div class="header no-alone-1"><div class="table"><div class="left"><span class="title">Web Developer</span><span class="subtitle margin-text-1"><a href="https://ipeen.com">Hon Gu Inc. (Ipeen)</a></span></div><div class="right"><span class="date">Mar 2008 - Mar 2009</span></div></div></div><div class="summary markdown margin-text-4"><p>Hon Gu operates an e-commerce information platform with a &quot;community&quot; model, providing consumers with a platform to share various consumption experiences in their daily lives. The company's flagship product, iPeen, is the largest food review website in Taiwan.</p>
+</div><ul class="highlights margin-text-4 no-break"><li>Developed backend for coupon feature using PHP and MySQL on restaurant review platform.</li><li>Gained in-depth understanding of food review platforms and the restaurant industry.</li></ul></div></div></div><div class="volunteer margin-container-4"><p class="section-title no-alone-2">Volunteer</p><div class="container"><div class="article margin-container-3"><div class="header no-alone-1"><div class="table"><div class="left"><span class="title">Contributor</span><span class="subtitle margin-text-1"><a href="https://g0v.asia">g0v.tw</a></span></div><div class="right"><span class="date">Feb 2013 - Feb 2019</span></div></div></div><div class="summary markdown margin-text-4"><p>g0v.tw is a non-profit, unofficial community organization that aims to promote government information transparency. By combining technology and civic power, it advocates for open and transparent government governance and actively participates in citizen technology projects to facilitate interaction and communication between the government and citizens.</p>
+</div></div><div class="article margin-container-3"><div class="header no-alone-1"><div class="table"><div class="left"><span class="title">Debian Maintainer</span><span class="subtitle margin-text-1"><a href="https://debian.org">Debian Project</a></span></div><div class="right"><span class="date">Jun 2011 - Jan 2013</span></div></div></div><div class="summary markdown margin-text-4"><p>Debian is a free and open-source software package composed of a computer operating system released under the GNU General Public License and other free software licenses, maintained by over a thousand volunteer developers worldwide.</p>
+</div><ul class="highlights margin-text-4 no-break"><li>Responsible for maintaining and updating multiple open-source packages, resolving program errors and improving performance.</li><li>Gained in-depth understanding of the development process and community operations of open-source software.</li></ul></div><div class="article margin-container-3"><div class="header no-alone-1"><div class="table"><div class="left"><span class="title">Financial Management</span><span class="subtitle margin-text-1"><a href="https://tw.pycon.org/2012/">PyCon Taiwan 2012</a></span></div><div class="right"><span class="date">Jan 2012 - Dec 2012</span></div></div></div><div class="summary markdown margin-text-4"><p>PyCon Taiwan is an annual conference organized and initiated by the Python community in Taiwan, attracting 250 attendees in its first year.</p>
+</div><ul class="highlights margin-text-4 no-break"><li>Prepared budget plan for conference to eliminate capital and sponsorship risks, ensuring smooth operation.</li><li>Developed complete accounting process from bookkeeping, expenditure verification to cash flow management to ensure clear financial situation.</li><li>Designed ticket pricing strategy including early bird program to overcome audience's free culture consumption habits.</li></ul></div><div class="article margin-container-3"><div class="header no-alone-1"><div class="table"><div class="left"><span class="title">Finance management and Program committee member</span><span class="subtitle margin-text-1"><a href="https://coscup.org/2010">COSCUP &amp; Gnome Asia 2010</a></span></div><div class="right"><span class="date">Jan 2010 - Dec 2010</span></div></div></div><div class="summary markdown margin-text-4"><p>COSCUP is Taiwan's largest annual free and open-source software (FLOSS) conference organized by the local community. In 2010, it attracted nearly 1,000 attendees and was co-organized with Gnome.Asia.</p>
+</div><ul class="highlights margin-text-4 no-break"><li>Managed the financial flow of three organizations collaborating on the conference, ensuring accurate tracking of expenses and income, and fairly distributing leftover funds after the event.</li><li>Controlled cash flow when the conference unexpectedly expanded to 1000 attendees, preventing debt from occurring.</li><li>Learned to use GnomeCash accounting tool, gaining basic accounting skills within a month.</li></ul></div><div class="article margin-container-3"><div class="header no-alone-1"><div class="table"><div class="left"><span class="title">Program Committee Member</span><span class="subtitle margin-text-1"><a href="https://coscup.org/2009">COSCUP</a></span></div><div class="right"><span class="date">Jan 2009 - Dec 2009</span></div></div></div><div class="summary markdown margin-text-4"><p>COSCUP is Taiwan's largest annual free and open source software (FLOSS) conference organized by the local community, with approximately 450 attendees.</p>
+</div><ul class="highlights margin-text-4 no-break"><li>Planned seminar programs, invited speakers, confirmed schedules, and coordinated with the program committee chair to finalize the list of speakers.</li><li>Served as a moderator for some speeches, effectively coordinating the entire meeting process to ensure the event ran smoothly.</li><li>Balanced the preferences of the audience with the needs of sponsors to avoid overly commercialized speeches.</li></ul></div></div></div></div><div class="side"><div class="skills margin-container-4"><p class="section-title no-alone-1">Skills</p><div class="container"><div class="article no-break"><span>Programming</span></div><div class="article no-break"><span></span><ul class="margin-text-2"><li>AI</li><li>Shell Script</li><li>Python</li><li>JavaScript/TypeScript</li><li>Flutter</li><li>Linux</li><li>AWS/GCloud/DevOps</li></ul></div><div class="article no-break"><span>Management</span></div><div class="article no-break"><span></span><ul class="margin-text-2"><li>Shape Up</li><li>OGSM</li></ul></div></div></div><div class="education margin-container-4"><p class="section-title no-alone-1">Education</p><div class="container"><div class="article margin-container-2 no-break"><div class="title markdown"><p>Bachelor (Unfinished), Electronic Engineering</p>
+</div><span class="institution margin-text-2"><a href="http://www.nkust.edu.tw">National Kaohsiung University of Applied Sciences</a></span></div></div></div><div class="awards margin-container-4"><p class="section-title no-alone-1">Awards</p><div class="container"><div class="article margin-container-2 no-break"><div class="header"><span class="title">Hack Tainan Competition 2014 First Prize</span><span class="awarder margin-text-2">Tainan City Government</span></div><div class="summary markdown margin-text-3"><p>Led the team in developing an award-winning app that presents links between historical events and landmarks using a timeline and layered imagery.</p>
+</div></div><div class="article margin-container-2 no-break"><div class="header"><span class="title">Valuable Contribution Award</span><span class="awarder margin-text-2">Canonical Ltd.</span></div><div class="summary markdown margin-text-3"><p>Received for outstanding contributions in Canonical.</p>
+</div></div></div></div><div class="languages margin-container-4 no-break"><p class="section-title no-alone-1">Languages</p><div class="container"><ul><li class="article margin-text-2">Chinese · Native Speaker</li><li class="article margin-text-2">English · Work-limited</li></ul></div></div><div class="interests margin-container-4 no-break"><p class="section-title no-alone-1">Interests</p><div class="container"><ul><li class="article margin-text-2">Exercise</li><li class="article margin-text-2">Video Game</li></ul></div></div><div class="links margin-container-4 no-break"><p class="section-title no-alone-1">Links</p><div class="container"><ul><li class="article margin-text-4"><a href="https://twitter.com/hychen"><strong>twitter.com</strong>/hychen</a></li><li class="article margin-text-4"><a href="https://www.linkedin.com/in/hychen/"><strong>linkedin.com</strong>/in/hychen</a></li><li class="article margin-text-4"><a href="https://github.com/hychen"><strong>github.com</strong>/hychen</a></li></ul></div></div></div></div></div></body></html>

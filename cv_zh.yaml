@@ -7,7 +7,7 @@ basics:
     address: ''
     city: 新北市
     countryCode: 中華民國
-    postalCode: 242
+    postalCode: "242"
     region: ''
   profiles:
     - network: Twitter
@@ -28,30 +28,27 @@ basics:
 skills:
   - name: 程式開發
   - keywords:
+    - AI
     - Shell Script
     - Python
     - JavaScript/TypeScript
     - Flutter
     - Linux
-    - AWS/GCloud
+    - AWS/GCloud/DevOps
   - name: 管理
   - keywords:
     - Shape Up
     - OGSM
-  # - name: 其它
-  # - level: 專家
-  # - keywords:
-  #   - 社群經營
 
 work:
-  - name: 自由工作者
-    startDate: 2020-01-01
+  - position: 自由工作者
+    startDate: "2020-01-01"
     summary: |
-      開發了多個產品雛形，包括去中心化社交網路發文應用、Index-Fund 區塊鏈協議、去中心化雙鍊筆記軟體。使用了 Polkadot、Rust、Solidity、Flutter 等技術。目前這些產品仍在初期研發及評估階段，未進行正式的推出或上市。
+      提供自由工作者服務，專注於評估前沿科技。使用 AI、Python、Polkadot、Rust、Solidity、Arweave、Flutter 等技術開發了多個產品雛形。
   - name: TrustableAI Inc.
     position: 共同創辦人兼執行長
-    startDate: 2018-01-01
-    endDate: 2020-01-01
+    startDate: "2018-01-01"
+    endDate: "2020-01-01"
     summary: |
       TrustableAI 旨在推廣機器學習和人工智慧技術更具倫理和可信度的使用，提供 TrustableAI Augit 平台以檢測模型的公平性、穩健性和可靠性。提供定制化的咨詢服務，並通過工作坊和演講推廣倫理 AI 和公平演算法的概念。
     highlights:
@@ -60,18 +57,18 @@ work:
       - 促成政府研議「可信任人工智慧」等監管議題，為產業發展做出貢獻。
       - 不幸因健康因素，不得不結束公司營運。
   - name: 經濟部技術處新興產業技術研發布局及策略推動計畫
-    position: 約聘顧問
-    startDate: 2019-05-01
-    endDate: 2019-08-01
+    position: 計畫顧問
+    startDate: "2019-05-01"
+    endDate: "2019-08-01"
     summary: |
       該計畫旨在協助成立以效益驅動之新興科專計畫，透過與國內外產學研專家合作，研析新興科專研發議題，並協助技術處進行新興科專計畫的規劃、徵求與評估，以及擔任新興研發策略幕僚，執行產業技術議題研析、科專策略擘劃和科專計畫執行評估等任務。
     highlights:
       - 掃描臺灣科技社群關注的熱門技術趨勢，協助資策會產業情報研究所做出議題評選，提供給科技會報及其他政府委任研究計畫。
       - 掃描的技術熱點包括人工智慧、區塊鏈、量子電腦、低軌道衛星相關技術，以及產業資訊或專家人選。
   - name: 科技會報社會與科技溝通平台
-    position: 約聘分項主持人
-    startDate: 2017-10-01
-    endDate: 2018-01-01
+    position: 分項計畫主持人
+    startDate: "2017-10-01"
+    endDate: "2018-01-01"
     summary: |
       該計畫旨在在政策週期的前期就納入公眾參與的機制，將來自虛擬網路和地方實體的公眾思維與想法融入科技政策中，建構滾動式的政策形成機制。
     highlights:
@@ -83,8 +80,8 @@ work:
       - 合作臺灣科技社群，成功將建設性意見納入科技會報的政策規劃參考。
   - name: Vectr Lab Inc.
     position: 資深軟體開發者
-    startDate: 2015-08-01
-    endDate: 2017-08-01
+    startDate: "2015-08-01"
+    endDate: "2017-08-01"
     summary: |
       Vectr Lab 是一家美國新創公司。旗下產品是一款免費的協作向量圖形編輯器，適用於網頁和桌面應用，旨在幫助每個人使用簡單但功能強大的跨平台工具輕鬆直觀地創建向量圖形設計。
     highlights:
@@ -92,14 +89,14 @@ work:
       - 使用多種技術，包括 JavaScript、Express、MongoDB 和 AWS。
       - 學習並掌握了 CRDT 資料結構，實現即時協作數位工具的雲端架構。
 
-  - name: 自由工作者
-    startDate: 2015-04-01
-    endDate: 2015-07-31
+  - position: 自由工作者
+    startDate: "2015-04-01"
+    endDate: "2015-07-31"
     summary: |
      為一家新創公司提供自由工作者服務，為該公司的攝影機物聯網裝置設計及開發微服務，使用的技術是 Python、AWS DynamoDB。同時參與多個開源軟體項目，貢獻程式碼、提交 Bug 報告和解決問題。
   - name: 空檔年
-    startDate: 2014-01-01
-    endDate: 2015-03-31
+    startDate: "2014-01-01"
+    endDate: "2015-03-31"
     summary: |
       離開舒適圈，接觸原生活圈外的人，並認識更多元的觀點、專業及理念。同時踏查臺南市的歷史與文化，豐富了本身化底蘊，並培養了對臺灣文化與傳統的更深入認識。
     highlights:
@@ -112,8 +109,8 @@ work:
   - name: Canonical Ltd.
     url: https://canonical.com
     position: 軟體工程師
-    startDate: 2010-08-01
-    endDate: 2013-12-01
+    startDate: "2010-08-01"
+    endDate: "2013-12-01"
     summary: |
       Canonical Ltd. 是一家由南非企業家馬克·沙特爾沃思創立的私人公司，旨在促進開源軟體專案，員工遍佈全球。該公司最著名的產品是 GNU/Linux Ubuntu。
     highlights:
@@ -126,8 +123,8 @@ work:
   - name: 佐臻股份有限公司
     url: https://www.jorjin.com
     position: 軟體工程師
-    startDate: 2009-04-01
-    endDate: 2010-04-01
+    startDate: "2009-04-01"
+    endDate: "2010-04-01"
     summary: |
       佐臻股份有限公司是以無線模組系統（SoM）和系統級封裝（SiP）模組技術成為全球大廠的零組件供應商。
     highlights:
@@ -138,8 +135,8 @@ work:
   - name: 紅谷資訊股份有限公司
     url: https://ipeen.com
     position: 網站開發者
-    startDate: 2008-03-31
-    endDate: 2009-03-31
+    startDate: "2008-03-31"
+    endDate: "2009-03-31"
     summary: |
       紅谷資訊股份有限公司，係以「社群」作為營運模式的電商資訊平台，提供消費者分享生活中各式消費體驗。旗下產品愛評網（iPeen）是臺灣最大的美食評論網站。
     highlights:
@@ -147,13 +144,13 @@ work:
       - 深入了解美食點評平台和餐飲業相關知識。
 awards:
   - title: 2014 台南黑客松 Hack Tainan 競賽首獎
-    date: 2014-06-22
+    date: "2014-06-22"
     awarder: 中華民國臺南市政府
     summary: |
       領導團隊開發 App，以時間軸和歷史疊圖方式呈現古蹟和重要歷史事件的連結作為特色獲獎。
 
   - title: Valuable Contribution Award
-    date: 2012-01-01
+    date: "2012-01-01"
     awarder: Canonical Ltd.
     summary: 獲獎以表揚對 Canonical 公司的卓越貢獻。
 
@@ -162,22 +159,22 @@ education:
     url: http://www.nkust.edu.tw
     area: 電子工程系
     studyType: 學士肄業
-    startDate: 2004-06-01
-    endDate: 2006-06-01
+    startDate: "2004-06-01"
+    endDate: "2006-06-01"
 
 volunteer:
   - organization: g0v.tw
     position: 貢獻者
     url: https://g0v.asia
-    startDate: 2013-02-01
-    endDate: 2019-02-01
+    startDate: "2013-02-01"
+    endDate: "2019-02-01"
     summary:
       g0v.tw 是一個非營利、非官方的社群組織，以促進政府資訊透明化為目標。透過科技和公民力量的結合，推動開放透明的政府治理，並且積極參與公民科技專案，促進政府與公民之間的互動與溝通。
   - organization: Debian 計畫
     position: 套件維護者
     url: https://debian.org
-    startDate: 2011-06-01
-    endDate: 2013-01-01
+    startDate: "2011-06-01"
+    endDate: "2013-01-01"
     summary: |
       Debian 是一個以 GNU 通用公眾授權條款和其他自由軟體授權條款發布的自由及開放原始碼軟體套件所組成的電腦作業系統，由全球一千多位開發者志工維護。
     highlights:
@@ -186,8 +183,8 @@ volunteer:
   - organization: PyCon Taiwan 2012
     position: 財務管理
     url: https://tw.pycon.org/2012/
-    startDate: 2012-01-01
-    endDate: 2012-12-31
+    startDate: "2012-01-01"
+    endDate: "2012-12-31"
     summary: |
       PyCon Taiwan 是一個由臺灣 Python 社群所組織與發起的年度研討會，首屆人數吸引 250 人與會。
     highlights:
@@ -197,8 +194,8 @@ volunteer:
   - organization: 開源人年會 （COSCUP）& Gnome Asia 2010
     position: 財務管理兼任議程委員
     url: https://coscup.org/2010
-    startDate: 2010-01-01
-    endDate: 2010-12-31
+    startDate: "2010-01-01"
+    endDate: "2010-12-31"
     summary: |
       開源年會是由當地社群組織的台灣最大型的年度自由及開放原始碼軟體（FLOSS）會議，2010 吸引近 1000 人與會。該屆會議與 Gnome.Asia 合辦。
     highlights:
@@ -208,8 +205,8 @@ volunteer:
   - organization: 開源人年會（COSCUP）
     position: 議程委員
     url: https://coscup.org/2009
-    startDate: 2009-01-01
-    endDate: 2009-12-31
+    startDate: "2009-01-01"
+    endDate: "2009-12-31"
     summary: |
       開源年會是由當地社群組織的台灣最大型的年度自由及開放原始碼軟體（FLOSS）會議，共約 450 人與會。
     highlights:

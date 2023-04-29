@@ -1,0 +1,375 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><style>@charset "UTF-8";
+/* Workaround for 'break-before:avoid' */
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+}
+
+ul, li {
+  margin: 0;
+  padding: 0;
+}
+
+span, q {
+  display: block;
+}
+
+p {
+  margin: 0;
+}
+
+@page {
+  size: A4;
+  margin: 15mm 0 20mm 0;
+}
+@page :first {
+  margin-top: 10mm;
+}
+a {
+  color: #222222;
+  font-weight: inherit;
+  text-decoration: none;
+}
+a[href] {
+  text-decoration: underline;
+  text-decoration-color: #888888;
+}
+
+p, q {
+  line-height: 1.25em;
+}
+
+li {
+  line-height: 1.35em;
+}
+li:first-child {
+  margin-top: 0;
+}
+
+.content {
+  width: 1000px;
+  height: auto;
+  padding: 0 50px;
+  margin: 0 auto;
+  font-family: Helvetica, Arial, sans-serif;
+  color: #222222;
+}
+
+.table {
+  width: 100%;
+  display: table;
+}
+.table .main {
+  display: table-cell;
+  width: 70%;
+  padding-right: 50px;
+}
+.table .side {
+  display: table-cell;
+  width: 30%;
+  padding-left: 50px;
+  text-align: right;
+}
+
+.summary {
+  font-size: 15px;
+}
+.summary:empty {
+  display: none;
+}
+
+.section-title {
+  font-size: 26px;
+  font-weight: normal;
+  margin: 0 0 20px 0;
+}
+
+.margin-container-2:not(:first-child) {
+  margin-top: 20px;
+}
+
+.margin-container-3:not(:first-child) {
+  margin-top: 30px;
+}
+
+.margin-container-4:not(:first-child) {
+  margin-top: 50px;
+}
+
+.padding-container-2 {
+  padding: 20px 0;
+}
+
+.margin-text-1 {
+  margin-top: 2px;
+}
+.margin-text-1:empty {
+  display: none;
+}
+
+.margin-text-2 {
+  margin-top: 4px;
+}
+.margin-text-2:empty {
+  display: none;
+}
+
+.margin-text-3 {
+  margin-top: 6px;
+}
+.margin-text-3:empty {
+  display: none;
+}
+
+.margin-text-4 {
+  margin-top: 8px;
+}
+.margin-text-4:empty {
+  display: none;
+}
+
+.margin-text-5 {
+  margin-top: 14px;
+}
+.margin-text-5:empty {
+  display: none;
+}
+
+.no-break {
+  break-inside: avoid;
+}
+
+.no-alone-1 {
+  break-inside: avoid;
+}
+.no-alone-1::after {
+  content: "";
+  display: block;
+  height: 75px;
+  margin-bottom: -75px;
+}
+
+.no-alone-2 {
+  break-inside: avoid;
+}
+.no-alone-2::after {
+  content: "";
+  display: block;
+  height: 150px;
+  margin-bottom: -150px;
+}
+
+.markdown h1 {
+  font-size: 160%;
+  font-weight: bolder;
+}
+.markdown h2 {
+  font-size: 150%;
+  font-weight: bolder;
+}
+.markdown h3 {
+  font-size: 140%;
+  font-weight: bolder;
+}
+.markdown h4 {
+  font-size: 130%;
+  font-weight: bold;
+}
+.markdown h5 {
+  font-size: 120%;
+  font-weight: bold;
+}
+.markdown h6 {
+  font-size: 110%;
+  font-weight: bold;
+}
+.markdown ul, .markdown ol {
+  margin-left: 20px;
+}
+.markdown img {
+  display: block;
+  margin: 20px auto;
+  max-width: 1000px;
+  text-align: center;
+}
+.markdown blockquote {
+  margin: 20px 0;
+  padding: 15px 20px;
+}
+.markdown blockquote p {
+  display: inline;
+}
+.markdown code {
+  font-family: monospace;
+}
+
+.main .highlights {
+  width: auto;
+  display: block;
+  padding: 0 10px;
+  margin-bottom: 0;
+  columns: 2;
+  column-width: 310px;
+  column-gap: 10px;
+}
+.main .highlights li {
+  font-size: 14px;
+  list-style: none;
+}
+.main .highlights li:before {
+  content: "· ";
+  vertical-align: middle;
+}
+.main .left {
+  display: table-cell;
+}
+.main .left .title {
+  font-size: 18px;
+  font-weight: bold;
+  display: block;
+}
+.main .left .subtitle {
+  font-size: 16px;
+  font-weight: lighter;
+  display: block;
+}
+.main .right {
+  text-align: right;
+  display: table-cell;
+}
+.main .right .date {
+  font-size: 15px;
+  font-weight: lighter;
+  white-space: nowrap;
+}
+
+.basics .main {
+  vertical-align: middle;
+}
+.basics .main .name {
+  font-size: 80px;
+  line-height: 1em;
+  font-weight: bold;
+  display: block;
+  margin-left: -5.6px;
+}
+.basics .main .label {
+  font-size: 40px;
+  line-height: 1em;
+  font-weight: lighter;
+  display: block;
+  margin-left: -1.6px;
+}
+.basics .side {
+  vertical-align: middle;
+  padding-left: 0;
+  padding-top: 15px;
+}
+.basics .side .contact {
+  list-style-type: none;
+}
+.basics .side .contact li {
+  font-size: 18px;
+  line-height: 1.6em;
+}
+
+.links ul {
+  list-style: none;
+}
+.links ul li {
+  font-size: 14px;
+}
+
+.education .title {
+  font-size: 15px;
+}
+.education .institution {
+  font-size: 15px;
+  font-weight: lighter;
+}
+
+.awards .header .title {
+  font-size: 15px;
+}
+.awards .header .awarder {
+  font-size: 15px;
+  font-weight: lighter;
+}
+.awards .summary {
+  font-size: 14px;
+}
+
+.certificates .name {
+  font-size: 15px;
+}
+.certificates .issuer {
+  font-size: 15px;
+  font-weight: lighter;
+}
+
+.skills .section-title {
+  margin: 0;
+}
+.skills .container {
+  display: block;
+  columns: 2;
+  column-gap: 10px;
+}
+.skills .container .article {
+  break-inside: avoid-column;
+  min-width: 120px;
+  padding-top: 20px;
+}
+.skills .container .article span {
+  display: block;
+  font-size: 18px;
+  font-weight: lighter;
+}
+.skills .container .article li {
+  font-size: 14px;
+  list-style: none;
+}
+
+.languages ul {
+  list-style: none;
+}
+.languages ul li {
+  font-size: 14px;
+}
+
+.interests ul {
+  list-style: none;
+}
+.interests ul li {
+  font-size: 14px;
+}
+
+.references .name {
+  font-size: 15px;
+}
+.references q {
+  font-size: 14.5px;
+  font-weight: lighter;
+  font-style: italic;
+}</style><title>Resume 陳信屹 – 顧問</title></head><body><div class="content"><div class="basics"><div class="table padding-container-2"><div class="main"><span class="name">陳信屹</span><span class="label">顧問</span></div><div class="side"><ul class="contact"><li></li><li>ossug.hychen@gmail.com</li><li class="margin-text-5">新北市, 中華民國</li></ul></div></div><div class="summary markdown padding-container-2"><p>作為有十年以上經驗的科技領袖，我致力於領導數位轉型，透過策略性科技解決方案幫助企業實現目標。在人工智慧、SaaS、開放原始碼技術和物聯網等領域具備專業知識。善於溝通和協作，能夠擴大商業和技術之間的合作，創造成功的專案夥伴關係。</p>
+</div></div><div class="table padding-container-2"><div class="main"><div class="work margin-container-4"><p class="section-title no-alone-2">Experience</p><div class="container"><div class="article margin-container-3"><div class="header no-alone-1"><div class="table"><div class="left"><span class="title">自由工作者</span><span class="subtitle margin-text-1"><a></a></span></div><div class="right"><span class="date">Jan 2020 - Present</span></div></div></div><div class="summary markdown margin-text-4"><p>提供自由工作者服務，專注於評估前沿科技。使用 AI、Python、Polkadot、Rust、Solidity、Arweave、Flutter 等技術開發了多個產品雛形。</p>
+</div></div><div class="article margin-container-3"><div class="header no-alone-1"><div class="table"><div class="left"><span class="title">共同創辦人兼執行長</span><span class="subtitle margin-text-1"><a>TrustableAI Inc.</a></span></div><div class="right"><span class="date">Jan 2018 - Jan 2020</span></div></div></div><div class="summary markdown margin-text-4"><p>TrustableAI 旨在推廣機器學習和人工智慧技術更具倫理和可信度的使用，提供 TrustableAI Augit 平台以檢測模型的公平性、穩健性和可靠性。提供定制化的咨詢服務，並通過工作坊和演講推廣倫理 AI 和公平演算法的概念。</p>
+</div><ul class="highlights margin-text-4 no-break"><li>創辦並負責領導公司整體策略和發展方向。</li><li>入選知名新創加速器 AppWorks，獲得支持和資源協助公司成長。</li><li>促成政府研議「可信任人工智慧」等監管議題，為產業發展做出貢獻。</li><li>不幸因健康因素，不得不結束公司營運。</li></ul></div><div class="article margin-container-3"><div class="header no-alone-1"><div class="table"><div class="left"><span class="title">計畫顧問</span><span class="subtitle margin-text-1"><a>經濟部技術處新興產業技術研發布局及策略推動計畫</a></span></div><div class="right"><span class="date">May 2019 - Aug 2019</span></div></div></div><div class="summary markdown margin-text-4"><p>該計畫旨在協助成立以效益驅動之新興科專計畫，透過與國內外產學研專家合作，研析新興科專研發議題，並協助技術處進行新興科專計畫的規劃、徵求與評估，以及擔任新興研發策略幕僚，執行產業技術議題研析、科專策略擘劃和科專計畫執行評估等任務。</p>
+</div><ul class="highlights margin-text-4 no-break"><li>掃描臺灣科技社群關注的熱門技術趨勢，協助資策會產業情報研究所做出議題評選，提供給科技會報及其他政府委任研究計畫。</li><li>掃描的技術熱點包括人工智慧、區塊鏈、量子電腦、低軌道衛星相關技術，以及產業資訊或專家人選。</li></ul></div><div class="article margin-container-3"><div class="header no-alone-1"><div class="table"><div class="left"><span class="title">分項計畫主持人</span><span class="subtitle margin-text-1"><a>科技會報社會與科技溝通平台</a></span></div><div class="right"><span class="date">Oct 2017 - Jan 2018</span></div></div></div><div class="summary markdown margin-text-4"><p>該計畫旨在在政策週期的前期就納入公眾參與的機制，將來自虛擬網路和地方實體的公眾思維與想法融入科技政策中，建構滾動式的政策形成機制。</p>
+</div><ul class="highlights margin-text-4 no-break"><li>撰寫計畫提案，成功獲得約1000萬新台幣的資金支持。</li><li>擔任分項計畫的負責人，具備完整的人事、資金分配、法務決策權。</li><li>組建一支數位工具開發團隊，兩個月內完成人員招募並領導團隊開發線上協作軟體。</li><li>激勵團隊成員，面對資金延遲到位的情況自願無償工作，堅持推動計畫的進行。</li><li>設計線上與線下的民眾參與政策建議協作方法論，促進公私協力。</li><li>合作臺灣科技社群，成功將建設性意見納入科技會報的政策規劃參考。</li></ul></div><div class="article margin-container-3"><div class="header no-alone-1"><div class="table"><div class="left"><span class="title">資深軟體開發者</span><span class="subtitle margin-text-1"><a>Vectr Lab Inc.</a></span></div><div class="right"><span class="date">Aug 2015 - Aug 2017</span></div></div></div><div class="summary markdown margin-text-4"><p>Vectr Lab 是一家美國新創公司。旗下產品是一款免費的協作向量圖形編輯器，適用於網頁和桌面應用，旨在幫助每個人使用簡單但功能強大的跨平台工具輕鬆直觀地創建向量圖形設計。</p>
+</div><ul class="highlights margin-text-4 no-break"><li>負責前端繪圖、多元登入功能、DevOps 環境的開發。</li><li>使用多種技術，包括 JavaScript、Express、MongoDB 和 AWS。</li><li>學習並掌握了 CRDT 資料結構，實現即時協作數位工具的雲端架構。</li></ul></div><div class="article margin-container-3"><div class="header no-alone-1"><div class="table"><div class="left"><span class="title">自由工作者</span><span class="subtitle margin-text-1"><a></a></span></div><div class="right"><span class="date">Apr 2015 - Jul 2015</span></div></div></div><div class="summary markdown margin-text-4"><p>為一家新創公司提供自由工作者服務，為該公司的攝影機物聯網裝置設計及開發微服務，使用的技術是 Python、AWS DynamoDB。同時參與多個開源軟體項目，貢獻程式碼、提交 Bug 報告和解決問題。</p>
+</div></div><div class="article margin-container-3"><div class="header no-alone-1"><div class="table"><div class="left"><span class="title"></span><span class="subtitle margin-text-1"><a>空檔年</a></span></div><div class="right"><span class="date">Jan 2014 - Mar 2015</span></div></div></div><div class="summary markdown margin-text-4"><p>離開舒適圈，接觸原生活圈外的人，並認識更多元的觀點、專業及理念。同時踏查臺南市的歷史與文化，豐富了本身化底蘊，並培養了對臺灣文化與傳統的更深入認識。</p>
+</div><ul class="highlights margin-text-4 no-break"><li>參與南星新創加速器的籌備，擔任專案經理，負責追蹤有潛力的專案。</li><li>受邀擔任成功大學的課程業師，向學生分享跨國公司的工作模式，黑客松經驗。</li><li>獲得一次黑客松競賽的首獎，展現出在解決問題和創新方面的能力。</li><li>組織一個創業社群，成功媒合了一位資深電商總監與一位資安創業家，並與成功大學合作開辦課程，促進產學合作。</li><li>成功推薦一位候選人擔任推動臺南市政府資訊政策發展的重要職務，對數位轉型做出貢獻。</li><li>參與 pgrest 開源專案的開發，該專案將 Postgresql 轉化為 NoSQL 資料庫，為資料庫行業帶來創新。</li></ul></div><div class="article margin-container-3"><div class="header no-alone-1"><div class="table"><div class="left"><span class="title">軟體工程師</span><span class="subtitle margin-text-1"><a href="https://canonical.com">Canonical Ltd.</a></span></div><div class="right"><span class="date">Aug 2010 - Dec 2013</span></div></div></div><div class="summary markdown margin-text-4"><p>Canonical Ltd. 是一家由南非企業家馬克·沙特爾沃思創立的私人公司，旨在促進開源軟體專案，員工遍佈全球。該公司最著名的產品是 GNU/Linux Ubuntu。</p>
+</div><ul class="highlights margin-text-4 no-break"><li>確保與硬體原始設備製造商(OEM/ODM)和晶片組供應商的端對端技術整合</li><li>修正 Ubuntu 上 BIOS、Kernel、驅動程式和應用軟體的多個臭蟲。</li><li>開發 Ubuntu 工廠狀態還原解決方案，並成功導入到華碩跟 HP 專案。</li><li>開發 Ubuntu 工廠安裝流程解決方案，並成功導入到 HP 專案。</li><li>回饋多個補丁到上游，提升整體開源軟體生態系。</li></ul></div><div class="article margin-container-3"><div class="header no-alone-1"><div class="table"><div class="left"><span class="title">軟體工程師</span><span class="subtitle margin-text-1"><a href="https://www.jorjin.com">佐臻股份有限公司</a></span></div><div class="right"><span class="date">Apr 2009 - Apr 2010</span></div></div></div><div class="summary markdown margin-text-4"><p>佐臻股份有限公司是以無線模組系統（SoM）和系統級封裝（SiP）模組技術成為全球大廠的零組件供應商。</p>
+</div><ul class="highlights margin-text-4 no-break"><li>參與多個 Android 嵌入式裝置專案，負責 TI WIFI/BT 模組啟用和客戶嵌入式系統中無線網路和藍牙功能確保。</li><li>成功為 TI 1271 實現了專有的 SDIO 驅動程式，並且能夠在Freescale iMx51 和 TI OMAP3530上運行。</li><li>成功移植了 0xdroid 到 Devkit8000 開發板。</li><li>掌握 Android 無線網路和藍牙相關知識。</li></ul></div><div class="article margin-container-3"><div class="header no-alone-1"><div class="table"><div class="left"><span class="title">網站開發者</span><span class="subtitle margin-text-1"><a href="https://ipeen.com">紅谷資訊股份有限公司</a></span></div><div class="right"><span class="date">Mar 2008 - Mar 2009</span></div></div></div><div class="summary markdown margin-text-4"><p>紅谷資訊股份有限公司，係以「社群」作為營運模式的電商資訊平台，提供消費者分享生活中各式消費體驗。旗下產品愛評網（iPeen）是臺灣最大的美食評論網站。</p>
+</div><ul class="highlights margin-text-4 no-break"><li>擔任後端開發，負責口碑券功能，使用 PHP 和 MySQL 撰寫程式碼。</li><li>深入了解美食點評平台和餐飲業相關知識。</li></ul></div></div></div><div class="volunteer margin-container-4"><p class="section-title no-alone-2">Volunteer</p><div class="container"><div class="article margin-container-3"><div class="header no-alone-1"><div class="table"><div class="left"><span class="title">貢獻者</span><span class="subtitle margin-text-1"><a href="https://g0v.asia">g0v.tw</a></span></div><div class="right"><span class="date">Feb 2013 - Feb 2019</span></div></div></div><div class="summary markdown margin-text-4"><p>g0v.tw 是一個非營利、非官方的社群組織，以促進政府資訊透明化為目標。透過科技和公民力量的結合，推動開放透明的政府治理，並且積極參與公民科技專案，促進政府與公民之間的互動與溝通。</p>
+</div></div><div class="article margin-container-3"><div class="header no-alone-1"><div class="table"><div class="left"><span class="title">套件維護者</span><span class="subtitle margin-text-1"><a href="https://debian.org">Debian 計畫</a></span></div><div class="right"><span class="date">Jun 2011 - Jan 2013</span></div></div></div><div class="summary markdown margin-text-4"><p>Debian 是一個以 GNU 通用公眾授權條款和其他自由軟體授權條款發布的自由及開放原始碼軟體套件所組成的電腦作業系統，由全球一千多位開發者志工維護。</p>
+</div><ul class="highlights margin-text-4 no-break"><li>負責維護和更新多個開源套件，解決程式錯誤和提高性能。</li><li>深入瞭解了開源軟體的開發流程及開發者社群的運作模式，提高軟體品質和使用者體驗。</li></ul></div><div class="article margin-container-3"><div class="header no-alone-1"><div class="table"><div class="left"><span class="title">財務管理</span><span class="subtitle margin-text-1"><a href="https://tw.pycon.org/2012/">PyCon Taiwan 2012</a></span></div><div class="right"><span class="date">Jan 2012 - Dec 2012</span></div></div></div><div class="summary markdown margin-text-4"><p>PyCon Taiwan 是一個由臺灣 Python 社群所組織與發起的年度研討會，首屆人數吸引 250 人與會。</p>
+</div><ul class="highlights margin-text-4 no-break"><li>擬定研討會規模預算試算方案，消除首屆舉辦缺乏資本、贊助可能不足的風險，確保研討會運作順利。</li><li>負責制定完整的會計流程，從簿記、支出核銷到現金流管理，確保財務狀況清晰明朗。</li><li>設計票價推銷策略，包括早鳥方案，克服聽眾對免費文化的消費慣性。</li></ul></div><div class="article margin-container-3"><div class="header no-alone-1"><div class="table"><div class="left"><span class="title">財務管理兼任議程委員</span><span class="subtitle margin-text-1"><a href="https://coscup.org/2010">開源人年會 （COSCUP）&amp; Gnome Asia 2010</a></span></div><div class="right"><span class="date">Jan 2010 - Dec 2010</span></div></div></div><div class="summary markdown margin-text-4"><p>開源年會是由當地社群組織的台灣最大型的年度自由及開放原始碼軟體（FLOSS）會議，2010 吸引近 1000 人與會。該屆會議與 Gnome.Asia 合辦。</p>
+</div><ul class="highlights margin-text-4 no-break"><li>管理三個組織在協辦此次演討會的金流狀況，確保支出和收入的準確追蹤，以及公正分配研討會結束後剩餘資金。</li><li>控制了研討會規模意外增加達到 1000 人時的現金流，避免了負債情況的發生。</li><li>學習使用 GnomeCash 記帳工具，一個月內從零經驗到具備基礎會計能力。</li></ul></div><div class="article margin-container-3"><div class="header no-alone-1"><div class="table"><div class="left"><span class="title">議程委員</span><span class="subtitle margin-text-1"><a href="https://coscup.org/2009">開源人年會（COSCUP）</a></span></div><div class="right"><span class="date">Jan 2009 - Dec 2009</span></div></div></div><div class="summary markdown margin-text-4"><p>開源年會是由當地社群組織的台灣最大型的年度自由及開放原始碼軟體（FLOSS）會議，共約 450 人與會。</p>
+</div><ul class="highlights margin-text-4 no-break"><li>策劃研討會議程，負責邀請講者、確認時間，並協調議程委員主席決定最終演講名單。</li><li>擔任部分演講主持人，有效協調整場會議流程，確保活動順利舉行。</li><li>平衡聽眾喜好及贊助商需求，避免出現過度商業化的演講。</li></ul></div></div></div></div><div class="side"><div class="skills margin-container-4"><p class="section-title no-alone-1">Skills</p><div class="container"><div class="article no-break"><span>程式開發</span></div><div class="article no-break"><span></span><ul class="margin-text-2"><li>AI</li><li>Shell Script</li><li>Python</li><li>JavaScript/TypeScript</li><li>Flutter</li><li>Linux</li><li>AWS/GCloud/DevOps</li></ul></div><div class="article no-break"><span>管理</span></div><div class="article no-break"><span></span><ul class="margin-text-2"><li>Shape Up</li><li>OGSM</li></ul></div></div></div><div class="education margin-container-4"><p class="section-title no-alone-1">Education</p><div class="container"><div class="article margin-container-2 no-break"><div class="title markdown"><p>學士肄業, 電子工程系</p>
+</div><span class="institution margin-text-2"><a href="http://www.nkust.edu.tw">高雄科技大學（原高雄應用科技大學）</a></span></div></div></div><div class="awards margin-container-4"><p class="section-title no-alone-1">Awards</p><div class="container"><div class="article margin-container-2 no-break"><div class="header"><span class="title">2014 台南黑客松 Hack Tainan 競賽首獎</span><span class="awarder margin-text-2">中華民國臺南市政府</span></div><div class="summary markdown margin-text-3"><p>領導團隊開發 App，以時間軸和歷史疊圖方式呈現古蹟和重要歷史事件的連結作為特色獲獎。</p>
+</div></div><div class="article margin-container-2 no-break"><div class="header"><span class="title">Valuable Contribution Award</span><span class="awarder margin-text-2">Canonical Ltd.</span></div><div class="summary markdown margin-text-3"><p>獲獎以表揚對 Canonical 公司的卓越貢獻。</p>
+</div></div></div></div><div class="languages margin-container-4 no-break"><p class="section-title no-alone-1">Languages</p><div class="container"><ul><li class="article margin-text-2">中文 · 母語</li><li class="article margin-text-2">英語 · 熟練</li></ul></div></div><div class="interests margin-container-4 no-break"><p class="section-title no-alone-1">Interests</p><div class="container"><ul><li class="article margin-text-2">運動</li><li class="article margin-text-2">電動</li></ul></div></div><div class="links margin-container-4 no-break"><p class="section-title no-alone-1">Links</p><div class="container"><ul><li class="article margin-text-4"><a href="https://twitter.com/hychen"><strong>twitter.com</strong>/hychen</a></li><li class="article margin-text-4"><a href="https://www.linkedin.com/in/hychen/"><strong>linkedin.com</strong>/in/hychen</a></li><li class="article margin-text-4"><a href="https://github.com/hychen"><strong>github.com</strong>/hychen</a></li></ul></div></div></div></div></div></body></html>

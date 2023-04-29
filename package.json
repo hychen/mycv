@@ -1,0 +1,15 @@
+{
+  "scripts": {
+    "export": "npm run export-zh && npm run export-en",
+    "export-zh": "resume export --resume cv_zh.yaml --theme actual build/cv_zh.html",
+    "export-en": "resume export --resume cv_en.yaml --theme actual build/cv_en.html",
+    "export-pdf": "npm run export-pdf-zh && npm run export-pdf-en",
+    "export-pdf-zh": "resume export --resume cv_zh.yaml --theme actual build/cv_zh.pdf",
+    "export-pdf-en": "resume export --resume cv_en.yaml --theme actual build/cv_en.pdf",
+    "view": "npm run export && npm run export-pdf open build/index.html"
+  },
+  "dependencies": {
+    "jsonresume-theme-actual": "^0.2.1",
+    "resume-cli": "^3.0.8"
+  }
+}
