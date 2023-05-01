@@ -1,1 +1,1 @@
-My resume and Curriculum Vitae.
+My resume and Curriculum Vitae in YAML format.
